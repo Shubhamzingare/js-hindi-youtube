@@ -1,4 +1,4 @@
-function calculateCartPrice(...Num1) //rest operator
+function calculateCartPrice(...Num1) //rest operator is used to get multiple values 
 {
 return Num1;
 }
