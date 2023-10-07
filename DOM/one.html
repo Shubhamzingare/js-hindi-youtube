@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Learning</title>
+<style>
+    .bg-black{
+        background-color: #212121;
+        color:#fff ;
+    }
+</style>
+
+</head>
+<body class="bg-black">
+    <!-- <div >
+        <h1 id="title" class="heading">DOM learning on CHai aur Code 
+            <span style="display:none;">test text</span></h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        sunt reprehenderit quis praesentium dolor nisi
+         beatae illo? Delectus!</p>
+    </div> -->
+
+    <div>
+        <ul class="langauges">
+
+        </ul>
+    </div>
+</body>
+<script>
+    function addOptiLanguage(lang)
+    {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(lang));
+        document.querySelector('.langauges').appendChild(li);
+    }
+    addOptiLanguage('JavaScript');
+    
+</script>
+</html>
