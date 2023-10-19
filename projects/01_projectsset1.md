@@ -85,3 +85,36 @@ setInterval(function () {
 
 
 ```
+## Project 6 solution code - bg color change using setInterval and clearInterval
+```javascript
+
+const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+
+  for (let i = 0; i < 6; i++) {
+    color += hex[Math.floor(Math.random() * 16)];
+  }
+  return color;
+};
+let intervalID;
+// console.log(randomColor());
+const startChangingColor = function () {
+  intervalID = setInterval(bodyColorChange, 2000);
+};
+document.querySelector('#start').addEventListener('click', function () {
+  console.log('started Changing BG color');
+  startChangingColor();
+});
+
+const bodyColorChange = function () {
+  document.body.style.backgroundColor = randomColor();
+};
+
+document.querySelector('#stop').addEventListener('click', function () {
+  console.log('Color changing STOPPED');
+  clearInterval(intervalID);
+});
+
+
+```
